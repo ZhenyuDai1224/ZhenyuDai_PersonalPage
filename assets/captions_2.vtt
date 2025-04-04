@@ -1,0 +1,155 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.360 --> 00:00:05.840
+This video focuses on the performance of  
+SLAMTEC RPLidar A2 M12 in the application    
+
+00:00:05.840 --> 00:00:11.560
+of autonomous retrieving robot Leo Rover.
+Our research focuses on a few questions    
+
+00:00:11.560 --> 00:00:15.400
+which are regarding to the range,  
+accuracy, angular resolution of the    
+
+00:00:15.400 --> 00:00:21.600
+lidar. As well as the relation with Leo Rover.
+The working environment for the Leo Rover is a 4.7    
+
+00:00:21.600 --> 00:00:28.360
+m by 1.7 m flat space enclosed by whiteboards  
+with additional whiteboards as obstacles.  
+
+00:00:28.360 --> 00:00:31.920
+Therefore this study focuses on on the  
+performance of the liar within range    
+
+00:00:31.920 --> 00:00:36.200
+of 6 m and with the white surfaces.
+The study hypothesized that RPLidar    
+
+00:00:36.200 --> 00:00:38.840
+performs reliably over a range of 0.2 m,  
+
+00:00:38.840 --> 00:00:42.400
+but the measurement accuracy decreases  
+with increasing distance due to signal    
+
+00:00:42.400 --> 00:00:45.160
+loss and beam divergence.
+The fixed angular resolution    
+
+00:00:45.160 --> 00:00:50.200
+of .225 degrees limits its ability to  
+distinguish closely spaced objects.  
+
+00:00:50.200 --> 00:00:55.560
+All these may affect Leo Rover's ability  
+to navigate the complex environment.  
+
+00:00:55.560 --> 00:01:00.120
+First let's talk about the working  
+principle of SLAMTEC RPLidar A2 M12.  
+
+00:01:00.120 --> 00:01:03.640
+When working, the Lidar rotates at  
+10 revolutions per second and take    
+
+00:01:03.640 --> 00:01:09.120
+measurements every 0.225 degrees, which  
+is 1,600 measurements per revolution.  
+
+00:01:09.120 --> 00:01:13.000
+Finally an array of position data  
+could be visualized like this.  
+
+00:01:13.000 --> 00:01:16.880
+In the experiment we have used the  
+SLAMTEC RPLidar A2 M12, its USB    
+
+00:01:16.880 --> 00:01:21.440
+interface, ROS 2 compatible laptop, boxes as  
+constraints to the environment of the Lidar,    
+
+00:01:21.440 --> 00:01:26.120
+whiteboards as the obstacles and pre-marked  
+positions using tape measures, each 1 m apart.  
+
+00:01:26.120 --> 00:01:30.480
+This shows the methodology of the experiment.  
+First, minimum detecting distance of the    
+
+00:01:30.480 --> 00:01:34.960
+Lidar is tested by moving the obstacle  
+towards the Lidar while it is recording.  
+
+00:01:34.960 --> 00:01:37.720
+Then the whiteboard is moved  
+and held for 10 seconds at  
+
+00:01:37.720 --> 00:01:44.360
+1 m, 2 m, 3 m Etc. up to 6 m. However it is  
+noticed that the data for distance over 3 m    
+
+00:01:44.360 --> 00:01:49.720
+becomes extremely noisy. The potential reason  
+for this could be the Lidar detecting unwanted    
+
+00:01:49.720 --> 00:01:54.920
+obstacles due to insufficient constraints.
+To resolve this, the orientation of the    
+
+00:01:54.920 --> 00:02:01.120
+boxes is changed. As a result the quantity  
+of noisy data has significantly decreased.  
+
+00:02:01.120 --> 00:02:04.040
+This graph illustrates the Lidar's  
+distance reading over time as an    
+
+00:02:04.040 --> 00:02:08.240
+obstacle is pushed towards the Lidar. The  
+readings constantly decrease until reaching    
+
+00:02:08.240 --> 00:02:13.120
+the minimum measurable distance of 0.145 m.
+This box chart shows how Lidar absolute error    
+
+00:02:13.120 --> 00:02:17.280
+increases with distance. At 1 m errors  
+are minimum and consistent, but beyond    
+
+00:02:17.280 --> 00:02:23.080
+4 m the errors become larger and more variable,  
+highlighting reduced accuracy at longer ranges.  
+
+00:02:23.080 --> 00:02:25.840
+The experiment outputs the  
+angle_increment of the Lidar,  
+
+00:02:25.840 --> 00:02:30.160
+which is the angle between  
+measurements, to be 0.00348 radians.    
+
+00:02:30.160 --> 00:02:36.720
+This corresponds to 20.9 mm gap at 6 m range.
+After visualizing the result we can update the    
+
+00:02:36.720 --> 00:02:40.680
+hypotheses we set previously.
+The minimum range is 0.145 m,    
+
+00:02:40.680 --> 00:02:45.800
+the measurement accuracy is acceptable. The
+0.2-degree angular resolution implies extra    
+
+00:02:45.800 --> 00:02:52.560
+care should be taken into object spacing  
+below 20 mm . However, overall the performance    
+
+00:02:52.560 --> 00:02:57.280
+of SLAMTEC RPLidar A2 M12 is sufficient  
+for the retrieving tasks for Leo Rover.
+
