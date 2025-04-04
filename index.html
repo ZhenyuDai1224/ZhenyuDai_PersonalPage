@@ -10,6 +10,22 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem;
+			}
+
+			p, h2, h3, h4 {
+				line-height: 1.6;
+				letter-spacing: 0.3px;
+			}
+
+			#main .features article {
+				padding: 1.5rem;
+			}
+			</style>
 	</head>
 	<body class="is-preload">
 
@@ -20,14 +36,14 @@
 					<h1 id="logo"><a href="assets/CV_Zhenyu_Dai_1.pdf" target="_blank">Zhenyu Dai</a></h1>
 					<p>Currently studying in Msc Robotics. <br />
 					BEng Mechanical Engineering.<br />
-					Passionate in Robotics and Automation. </p>
+					Passionate in Robotics, Mechatronics, and Manipulator Control. </p>
 				</header>
 				<nav id="nav">
 					<ul>
 						<li><a href="#one" class="active">About Me</a></li>
 						<li><a href="#two">Skills </a></li>
 						<li><a href="#three">Group Projects</a></li>
-						<li><a href="#four">Past works</a><li>
+						<li><a href="#four">Personal Work</a></li>
 						<li><a href="#five">Contact</a></li>
 					</ul>
 				</nav>
@@ -57,7 +73,7 @@
 										<h2>About me</h2>
 										<p>I am studying M.Sc. Robotics in University of Manchester <br />
 										where I finished my B.Eng. Mechanical Engineering <br />
-										I am interested in Robotics and Automation</p>
+										I am interested in Robotics, Mechatronics, and Manipulator Control</p>
 									</header>
 								</div>
 							</section>
@@ -82,27 +98,40 @@
 							<section id="three">
 								<div class="container">
 									<h3>Group Projects</h3>
-									<p>These are the project I have participated (or participating). Click the pictures below to see details.</p>
+									<p>Here are some group projects I have worked on or am currently involved in. Click the pictures below to see details.</p>
 									<div class="features">
 										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<div class="inner">
+											<video controls width="640" height="360">
+												<source src="assets/Cascade_Controller.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<div>
+												<h4>UAV Cascade PID Control: Group Feedback Control Project (Current)</h4>
+												<p>This is part of a team project for UAV position stabilization, where each team member implements an advanced feedback control algorithm. I implemented a cascaded PID controller with three layers: position (outer), velocity (middle), and acceleration (inner). Additionally, I implemented a separate simple PID controller dedicated to stabilizing the yaw position, ensuring accurate heading control. The overall system outputs velocity and yaw rate commands to guide a quadcopter to desired positions in a simulated 3D environment. The video demonstrates my controller achieving stable and accurate positioning.</p>
+											</div>
+										</article>
+										<article>
+											<video controls width="640" height="360">
+												<source src="assets/Manipulator_Camera_Video.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<div>
 												<h4>Leo Rover Automatic Retriever Robot Group Project (Current)</h4>
-												<p>Development of an automatic object retrieval robot with implementation of SLAM, manipulator, object detection and color recognition. My current role is the mechanical design of the robot. As the project is still under development, unfortunately no further details could be shown at this stage.</p>
+												<p>In our ongoing project to develop an automated object retrieval robot that incorporates SLAM, a manipulator, object detection, and color recognition, I have focused on the mechanical design of the payload sleds while collaborating on the manipulator system and integrating object detection with the manipulator. The video showcases a Trossen Pincher-X150 Manipulator working with Intel Realsense Depth Camera D435. </p>
 											</div>
 										</article>
 										<article>
 											<a href="https://github.com/ZhenyuDai1224/DAQ_LabView_Code" target="_blank" class="image"><img src="images/pic02.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>LabView project on data acquisition</h4>
-												<p>A LabView programme was developed to measure the pattern of 100mm x 100mm area with unknown image using XY plotter and inductive proximity sensor. My main role was to develop the LabView code that can navigate the sensor.</p>
+												<p>In a project designed to capture the pattern of an unknown image over a 100mm x 100mm area, we developed a LabView program that utilized an XY plotter paired with an inductive proximity sensor. My primary responsibility was to create the LabView code that accurately navigated the sensor throughout the measurement process.</p>
 											</div>
 										</article>
 										<article>
 											<a href="assets/group_36_design_3_final_report_2023-2024.pdf" target="_blank" class="image"><img src="images/pic03.png" alt="" /></a>
 											<div class="inner">
 												<h4>Mechanical design project on biaxial testing</h4>
-												<p>Developed design of an innovative biaxial loading fixture that can integrate into uniaxial testing machines to reduce costs. My main role was to develop selection matrix and integrate different parts to an assembly in Solidworks. </p>
+												<p>In a project focused on cost reduction, I spearheaded the design of a pioneering biaxial loading fixture compatible with uniaxial testing machines. My responsibilities included creating a detailed selection matrix to evaluate component options and meticulously integrating various parts into a cohesive assembly using SolidWorks. </p>
 											</div>
 										</article>
 									</div>
@@ -112,39 +141,60 @@
 						<!-- Four -->
 							<section id="four">
 								<div class="container">
-									<h3>Past Works</h3>
-									<p>These are works I have done.</p>
+									<h3>Personal Work</h3>
+									<p>These are work (reports, videos, projects etc.) I have accomplished. Click the pictures (or videos) below to see details.</p>
 									<div class="features">
+										<article>
+											<video controls width="640" height="360">
+												<source src="assets/A_Star_PathPlanning.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<div>
+												<h4>A* Path Planning Algorithm Implementation</h4>
+												<p>In this project, I implemented the A* path planning algorithm in Python within a GUI framework. The robot was required to plan a path from a user-defined start to goal location while avoiding user-defined obstacles. The algorithm uses 4-directional motion and the Euclidean distance as the heuristic function. The video demonstrates the successful execution of my implementation in real time.</p>
+											</div>
+										</article>
+
+										<article>
+											<video controls width="640" height="360">
+												<source src="assets/Robotic%20System%20for%20Sustainable%20Development.mp4" type="video/mp4">
+												<!-- Linking to the .vtt subtitle file -->
+												<track src="assets/captions_1.vtt" kind="subtitles" srclang="en" label="English" default>
+												<!-- Fallback message if video is not supported -->
+												Your browser does not support the video tag.
+											</video>
+											<div>
+												<h4>5-min video about robots and SDGs</h4>
+												<p>The educational video provided a brief overview of the applications of industrial and service robots, highlighting how these technologies can contribute to achieving the United Nations Sustainable Development Goals (SDGs). It also included an in-depth exploration of how robotics can be specifically applied to address one of the SDGs, demonstrating the potential impact of automation and intelligent systems in promoting sustainable development. </p>
+											</div>
+										</article>
+										<article>
+											<video controls width="640" height="360">
+												<source src="assets/Robotic_Systems_CW2.mp4" type="video/mp4">
+												<track src="assets/captions_2.vtt" kind="subtitles" srclang="en" label="English" default>
+												Your browser does not support the video tag.
+											</video>
+											<div>
+												<h4>Video Abstract: Sensor Performance and Experimental Analysis</h4>
+												<p>This video was created as part of a research communication coursework. It serves as a video abstract to accompany a scientific paper, summarizing the experimental campaign designed to assess sensor metrics and their impact on system performance. The video presents core principles, hypotheses, methodology, data analysis, and conclusions — all aimed at an academic research audience. Subtitles and appropriately licensed visuals were used to ensure professional quality and accessibility.</p>
+											</div>
+										</article>
+
 										<article>
 											<a href="assets/10830268%20Zhenyu%20Dai(Control%20Engineering%20Coursework).pdf" target="_blank" class="image"><img src="images/pic04.png" alt="" /></a>
 											<div class="inner">
 												<h4>Review on PID controllers</h4>
-												<p>A brief literature review of PID(Proportional-Integral-Derivative) controllers. It
-													has included origins of PID control, description of the PID control algorithm, ideal and standard
-													forms of PID control, limitations and improvement of the algorithm.</p>
+												<p>I conducted a concise literature review on Proportional-Integral-Derivative (PID) controllers, covering their historical origins, the underlying control algorithm, and the distinctions between ideal and standard forms. I also analyzed the common limitations of the PID approach and explored various improvements proposed in the literature. This review helped build a strong foundational understanding of PID control systems and their practical applications in modern control engineering.</p>
 											</div>
 										</article>
 										<article>
 											<a href="assets/Fluid%203%20Report%2010830268%20Zhenyu%20Dai.pdf" target="_blank" class="image"><img src="images/pic05.png" alt="" /></a>
 											<div class="inner">
 												<h4>Lab report in fluid mechanics.</h4>
-												<p>This report contains methodology, results and discussions from a hands-on experiment, which takes measurements of some important flow quantities such as fluctuating velocities, upstream and downstream pressure or root mean square velocities. The range of effects from the viscous sublayer as well as the streamwise turbulence intensity are discussed.  </p>
+												<p>This report presents the methodology, results, and discussion from a hands-on experiment focused on measuring key flow parameters, including fluctuating velocities, upstream and downstream pressure, and root mean square (RMS) velocities. The analysis explores the influence of the viscous sublayer and examines variations in streamwise turbulence intensity, providing insights into the complex behavior of turbulent flow. </p>
 											</div>
 										</article>
-										<article>
-											<video controls width="640" height="360">
-												<source src="assets/Robotic%20System%20for%20Sustainable%20Development.mp4" type="video/mp4">
-												<!-- Linking to the .vtt subtitle file -->
-												<track src="assets/captions.vtt" kind="subtitles" srclang="en" label="English" default>
-												<!-- Fallback message if video is not supported -->
-												Your browser does not support the video tag.
-											</video>
 
-											<div>
-												<h4>5-min video about robots and SDGs</h4>
-												<p>The educational video briefly introduced the application of industrial robots and service robots, as well as how they can be utilised to address the United Nation Sustainable Development Goals (SDGs). An in-depth exploration of robot's application against one of the SDGs is also given. </p>
-											</div>
-										</article>
 									</div>
 								</div>
 							</section>
@@ -167,6 +217,8 @@
 											</div>
 										</div>
 									</form>
+
+									
 								</div>
 							</section>
 
